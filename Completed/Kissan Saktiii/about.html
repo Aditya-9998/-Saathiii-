@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisaan Saathi - About Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo-and-language">
+            <div class="logo">🌿किसान Saathiii 🌿</div>
+            <div class="language-switcher">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                </select>
+            </div>
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html" data-lang-key="navbar.home">Home</a></li>
+                <li><a href="weather.html" data-lang-key="navbar.weather">Weather</a></li>
+                <li><a href="advisory.html" data-lang-key="navbar.advisory">Advisory</a></li>
+                <li><a href="news.html" data-lang-key="navbar.news">News</a></li>
+                <li><a href="insurance.html" data-lang-key="navbar.insurance">Crop Insurance</a></li>
+                <li><a href="mrp-rate.html" data-lang-key="navbar.mrpRate">MRP Rate</a></li>
+                <li><a href="about.html" data-lang-key="navbar.about">About</a></li>
+                <li><a href="login.html" data-lang-key="navbar.loginSignup">Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content about-page">
+        <section class="content-section our-story">
+            <h2 data-lang-key="about.ourStoryTitle">Our Story</h2>
+            <div class="story-container">
+                <div class="story-points">
+                    <p data-lang-key="about.storyIntro">
+                        🌿किसान Saathiii🌿 was founded to bridge the technology gap in agriculture by providing
+                        farmers with modern, data-driven tools.
+                        Our journey began with a simple idea: empower every farmer with the right information at the
+                        right time.
+                    </p>
+                    <ul class="story-list">
+                        <li data-lang-key="about.storyPoint1">We started by developing a platform that integrates hyper-local
+                            weather data to assist with planting and harvesting decisions.</li>
+                        <li data-lang-key="about.storyPoint2">Our mission expanded to include providing real-time market
+                            prices, connecting farmers directly with buyers to ensure fair compensation.</li>
+                        <li data-lang-key="about.storyPoint3">Today, we are committed to building a digital ecosystem that
+                            promotes sustainable farming practices and empowers the agricultural community.</li>
+                    </ul>
+                </div>
+                <div class="story-image">
+                    <img src="images/our Aim.png" alt="Kisaan Saathii Vision">
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section our-values">
+            <h2 data-lang-key="about.ourValuesTitle">Our Values</h2>
+            <div class="values-container">
+                <div class="value-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3 data-lang-key="about.value1Title">Empowerment</h3>
+                    <p data-lang-key="about.value1Text">We provide tools and knowledge to help farmers make informed
+                        decisions and take control of their livelihoods.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3 data-lang-key="about.value2Title">Sustainability</h3>
+                    <p data-lang-key="about.value2Text">We promote eco-friendly practices that benefit both the land and the
+                        farmer, ensuring a healthier future.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-heart"></i>
+                    <h3 data-lang-key="about.value3Title">Community</h3>
+                    <p data-lang-key="about.value3Text">We believe in a strong, connected network where farmers can share
+                        knowledge and grow together.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section team-section">
+            <h2 data-lang-key="about.teamTitle">Meet Our Team Members</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="images/Raj.jpg" alt="Raj - Founder & CEO">
+                    </div>
+                    <h3 data-lang-key="about.rajName">Raj</h3>
+                    <p class="role" data-lang-key="about.rajRole">Founder & CEO</p>
+                    <p class="quote" data-lang-key="about.rajQuote">"Leading the way to a digitally empowered harvest."</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="images/Anup.jpg" alt="Aditya Kr. Singh - Head of Agronomy & Tech Integration">
+                    </div>
+                    <h3 data-lang-key="about.adityaName">Aditya Kr. Singh</h3>
+                    <p class="role" data-lang-key="about.adityaRole">Head of Agronomy & Tech Integration</p>
+                    <p class="quote" data-lang-key="about.adityaQuote">"Bridge traditional wisdom with future technology."</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="images/Abhi 1.png" alt="Abhishek Sharma - Lead Software Architect">
+                    </div>
+                    <h3 data-lang-key="about.abhishekName">Abhishek Sharma</h3>
+                    <p class="role" data-lang-key="about.abhishekRole">Lead Software Architect</p>
+                    <p class="quote" data-lang-key="about.abhishekQuote">"Crafting intelligent tools for sustainable farming."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="js/footer.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html>

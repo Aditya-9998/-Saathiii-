@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo-and-language">
+            <div class="logo">🌿किसान Saathiii 🌿</div>
+            <div class="language-switcher">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                </select>
+            </div>
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html" data-lang-key="navbar.home">Home</a></li>
+                <li><a href="weather.html" data-lang-key="navbar.weather">Weather</a></li>
+                <li><a href="advisory.html" data-lang-key="navbar.advisory">Advisory</a></li>
+                <li><a href="news.html" data-lang-key="navbar.news">News</a></li>
+                <li><a href="insurance.html" data-lang-key="navbar.insurance">Crop Insurance</a></li>
+                <li><a href="mrp-rate.html" data-lang-key="navbar.mrpRate">MRP Rate</a></li>
+                <li><a href="about.html" data-lang-key="navbar.about">About</a></li>
+                <li><a href="login.html" class="active" data-lang-key="navbar.loginSignup">Login / Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content login-page">
+        <section class="login-container">
+            <h2 data-lang-key="login.loginTitle">Login to Kisaan Saathi</h2>
+            <form>
+                <div class="input-group">
+                    <label for="email" data-lang-key="login.emailLabel">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email"
+                        data-lang-key="login.emailPlaceholder">
+                </div>
+                <div class="input-group">
+                    <label for="password" data-lang-key="login.passwordLabel">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password"
+                        data-lang-key="login.passwordPlaceholder">
+                </div>
+                <button type="submit" class="btn-primary" data-lang-key="login.loginButton">Login</button>
+
+                <!-- ✅ FIXED: link को अलग elements में रखा -->
+                <p class="signup-text">
+                    <span data-lang-key="login.noAccountText">Don't have an account?</span>
+                    <a href="signup.html" data-lang-key="login.signupLink">Sign Up</a>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="js/footer.js"></script>
+    <script src="js/language.js"></script>
+</body>
+
+</html>

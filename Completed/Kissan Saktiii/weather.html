@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisaan Saathi - Weather</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-and-language">
+            <div class="logo">🌿किसान Saathiii 🌿</div>
+            <div class="language-switcher">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                </select>
+            </div>
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html" data-lang-key="navbar.home">Home</a></li>
+                <li><a href="weather.html" class="active" data-lang-key="navbar.weather">Weather</a></li>
+                <li><a href="advisory.html" data-lang-key="navbar.advisory">Advisory</a></li>
+                <li><a href="news.html" data-lang-key="navbar.news">News</a></li>
+                <li><a href="insurance.html" data-lang-key="navbar.insurance">Crop Insurance</a></li>
+                <li><a href="mrp-rate.html" data-lang-key="navbar.mrpRate">MRP Rate</a></li>
+                <li><a href="about.html" data-lang-key="navbar.about">About</a></li>
+                <li><a href="login.html" data-lang-key="navbar.loginSignup">Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section id="weather" class="section-card">
+            <h2 data-lang-key="weather.title">Local Weather Forecast</h2>
+            <p data-lang-key="weather.subtitle">Accurate, hyper-local weather information to help you plan your farming activities.</p>
+            <div class="weather-content">
+                <h3 data-lang-key="weather.currentConditions">Current Conditions</h3>
+            </div>
+        </section>
+    </main>
+
+
+    <div id="footer"></div>
+    <script src="js/footer.js"></script>
+    <script src="js/language.js"></script>
+</body>    
+</html>

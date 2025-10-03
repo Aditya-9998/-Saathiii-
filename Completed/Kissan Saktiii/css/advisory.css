@@ -1,0 +1,613 @@
+/*
+ * advisory.css - FINAL CONSOLIDATED CODE
+ * This version is verified and includes all styling for the 5-section layout 
+ * (Soil -> Crop -> Calculator -> Fert Display -> Equip) and enhanced aesthetics.
+ */
+
+/* --- Root Variables & Base Styles --- */
+:root {
+    --primary-color: #4CAF50;
+    /* Green for growth/Select */
+    --secondary-color: #2196F3;
+    /* Blue for titles/Water */
+    --accent-color: #FF9800;
+    /* Orange for alerts/Details button */
+    --text-color: #333;
+    --light-text-color: #777;
+    --background-color: #f0f4f8;
+    --card-bg-color: #ffffff;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --border-radius-card: 15px;
+    --button-border-radius: 8px;
+    --fert-card-bg: #e1f5fe;
+    /* Light Blue for Fertilizer cards */
+    --fert-card-border: #b3e5fc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* --- Main Layout and Advisory Sections --- */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.advisory-flow-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.advisory-section {
+    background-color: var(--card-bg-color);
+    padding: 2rem;
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-light);
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease-in-out;
+}
+
+.advisory-section h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* Style for disabled sections */
+.advisory-section.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    background-color: #fcfcfc;
+}
+
+/* --- 1. Horizontal Soil Selection --- */
+.sidebar,
+.soil-list {
+    display: none;
+}
+
+.horizontal-scroll-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.soil-card-horizontal {
+    min-width: 200px;
+    padding: 15px;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    border: 2px solid transparent;
+    background-color: #f7fcf7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.soil-card-horizontal:hover {
+    transform: translateY(-2px);
+    border-color: #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.soil-card-horizontal.active {
+    border-color: var(--primary-color);
+    background-color: #e8f5e9;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+    transform: none;
+}
+
+.soil-card-horizontal .info-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: help;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    pointer-events: all;
+}
+
+.region-popup {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: var(--shadow-light);
+    border-radius: 4px;
+    line-height: 1.4;
+    max-width: 300px;
+    transform: translateY(10px);
+    font-size: 0.9em;
+}
+
+/* --- 2. Related Crops (Season Tabs and Cards) --- */
+.season-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.season-tab {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    /* Pill Shape */
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.season-tab.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.crop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.crop-card {
+    padding: 0;
+    border-radius: var(--border-radius-card);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: border 0.2s, transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #e0e0e0;
+    background-color: var(--card-bg-color);
+}
+
+.crop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.crop-card .crop-image-container {
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: var(--border-radius-card);
+    border-top-right-radius: var(--border-radius-card);
+}
+
+.crop-card .crop-details-content {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.crop-card .crop-header h4 {
+    font-size: 1.3rem;
+    margin: 0 0 5px 0;
+}
+
+.crop-card .tag {
+    font-size: 0.9rem;
+    padding: 0.4em 0.8em;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Button Container */
+.crop-card>div:last-child {
+    display: flex;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    background-color: #f9f9f9;
+    border-bottom-left-radius: var(--border-radius-card);
+    border-bottom-right-radius: var(--border-radius-card);
+}
+
+.details-btn,
+.select-btn-crop {
+    flex-grow: 1;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: var(--button-border-radius);
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.details-btn {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.select-btn-crop {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.select-btn-crop[style*="background: rgb(0, 188, 212)"] {
+    background-color: #00bcd4 !important;
+    box-shadow: 0 0 0 2px #00bcd4, 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 3. Fertilizer Calculator & Guide (Section 3) --- */
+.calc-box {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.fertilizer-calc {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.fert-detail-card {
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    background-color: #fff9e6;
+    font-size: 0.9em;
+}
+
+/* --- 4. Recommended Fertilizers Display (Section 4) --- */
+/* --- New Styles for Image/Icon Overlay in Fertilizer Card --- */
+/* --- 4. Recommended Fertilizers Display (Section 4) --- */
+.fertilizer-cards-grid {
+    display: grid;
+    /* Use same grid setup as equipment for visual consistency */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.fertilizer-card {
+    position: relative;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid var(--fert-card-border);
+    border-radius: 10px;
+    background-color: var(--fert-card-bg);
+    box-shadow: 0 2px 5px rgba(33, 150, 243, 0.1);
+    transition: box-shadow 0.2s;
+    height: 100%;
+    /* Ensure uniform height within the grid */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.fertilizer-card:hover {
+    box-shadow: 0 4px 10px rgba(33, 150, 243, 0.2);
+}
+
+.fertilizer-card .card-top-bar {
+    position: relative;
+    height: 100px;
+    /* **CRITICAL: Set height to make image larger** */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.fert-product-image {
+    /* **CRITICAL: Make the image prominent** */
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    /* Visual border around the product area */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.fert-card-title {
+    font-size: 1.1em;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.fert-card-desc {
+    /* Ensures description doesn't overflow */
+    min-height: 2.4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 0.9em;
+    color: var(--light-text-color);
+    flex-grow: 1;
+}
+
+/* Info Icon Style for Fertilizer Usage/Safety */
+.info-icon-fert {
+    position: absolute;
+    top: 10px;
+    /* Adjusted position */
+    right: 10px;
+    /* Adjusted position */
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: white;
+    border-radius: 50%;
+    padding: 3px;
+    line-height: 1;
+    z-index: 5;
+}
+
+/* --- 5. Equipment Advisory (Section 5) --- */
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.equipment-card {
+    position: relative;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: var(--card-bg-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s;
+}
+
+.equipment-card p {
+    min-height: 2.4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.equip-image {
+    width: 100%;
+    max-height: 90px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.card-top-bar {
+    position: relative;
+    height: 90px;
+    margin-bottom: 5px;
+}
+
+/* Info Icon Style for Equipment Usage/Safety */
+.info-icon-equip {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: white;
+    border-radius: 50%;
+    padding: 3px;
+    line-height: 1;
+    z-index: 5;
+}
+
+/* --- Shared Tooltip/Popup Style for Notes --- */
+.equip-popup-tooltip {
+    display: none;
+    position: absolute;
+    z-index: 2000;
+    background: #ffffed;
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 350px;
+    text-align: left;
+    line-height: 1.4;
+    font-size: 0.95em;
+    pointer-events: none;
+}
+
+
+/* --- Dashboard / Analytics (for news.html) --- */
+.dashboard-section h2 {
+    color: #3f51b5;
+    font-size: 1.8rem;
+    padding-bottom: 15px;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.news-carousel {
+    border-radius: var(--border-radius-card);
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fcfcfc;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    width: 200%;
+    gap: 15px;
+    animation: scrollNews 25s linear infinite;
+}
+
+.news-card {
+    flex-shrink: 0;
+    width: calc(100% / 3);
+    padding: 10px;
+    border-radius: var(--button-border-radius);
+    background-color: white;
+    border: 1px solid #cceeff;
+}
+
+@keyframes scrollNews {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Styling the Dashboard Dropdowns */
+#graph-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+#graph-controls select {
+    padding: 5px 10px;
+    font-size: 0.95em;
+    height: 35px;
+    width: 130px;
+    /* Fixed smaller width for desktop */
+
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--button-border-radius);
+    background-color: var(--card-bg-color);
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Custom arrow image (Green) */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%234CAF50%22%20d%3D%22M287%20197.35L146.2%2056.55%205.4%20197.35z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 8px top 50%;
+    background-size: 0.5em auto;
+}
+
+#graph-controls select:hover,
+#graph-controls select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+    outline: none;
+}
+
+
+/* --- Modal (Full Process Details) --- */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: var(--border-radius-card);
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* CORRECTED CLOSE BUTTON POSITIONING AND SIZE */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--light-text-color);
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s;
+    z-index: 1001;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .crop-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card {
+        width: 48%;
+    }
+
+    /* Controls stack on tablets */
+    #graph-controls select {
+        width: 48%;
+        max-width: none;
+    }
+
+    .fertilizer-cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .advisory-section {
+        padding: 1rem;
+    }
+
+    .news-card {
+        width: 95%;
+    }
+
+    /* Controls go full width on phones */
+    #graph-controls {
+        flex-direction: column;
+    }
+
+    #graph-controls select {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .crop-card>div:last-child {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

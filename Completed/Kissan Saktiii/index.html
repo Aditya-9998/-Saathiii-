@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisaan Saathi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo-and-language">
+            <div class="logo">🌿किसान Saathiii 🌿</div>
+            <div class="language-switcher">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                </select>
+            </div>
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html" class="active" data-lang-key="navbar.home">Home</a></li>
+                <li><a href="weather.html" data-lang-key="navbar.weather">Weather</a></li>
+                <li><a href="advisory.html" data-lang-key="navbar.advisory">Advisory</a></li>
+                <li><a href="news.html" data-lang-key="navbar.news">News</a></li>
+                <li><a href="insurance.html" data-lang-key="navbar.insurance">Crop-Insurance</a></li>
+                <li><a href="mrp-rate.html" data-lang-key="navbar.mrpRate">Mrp-Rate</a></li>
+                <li><a href="about.html" data-lang-key="navbar.about">About</a></li>
+                <li><a href="login.html" data-lang-key="navbar.loginSignup">Login / Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Schemes Section -->
+        <section id="home" class="hero-section">
+            <section id="schemes-section">
+                <h2 data-lang-key="schemes.title">Government Schemes for Farmers</h2>
+                <div class="schemes-carousel-container">
+                    <div class="schemes-carousel"></div>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </section>
+
+            <!-- Hero -->
+            <div class="hero-content">
+                <h1 data-lang-key="hero.title">Your Farming Partner</h1>
+                <p data-lang-key="hero.subtitle">
+                    Empowering farmers with data-driven insights for better yields and profits.
+                </p>
+                <div class="search-bar-container">
+                    <input type="text" data-lang-key="hero.searchPlaceholder"
+                        placeholder="Search for crops, fertilizers, and schemes...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <!-- Fertilizer Section -->
+            <div id="fertilizer-section" class="explore-fertilizers-overlay">
+                <h2 data-lang-key="fertilizer.exploreTitle">Explore Fertilizers</h2>
+                <div class="fertilizer-categories">
+                    <div class="category-card">
+                        <img src="images/DAP_phospahte-rich.webp" alt="DAP Phosphate">
+                        <h3 data-lang-key="fertilizer.dap">DAP Phosphate</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="images/Ge1236.webp" alt="GE-1236">
+                        <h3 data-lang-key="fertilizer.ge">GE-1236</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="images/Tamoto_Ferti.jpg" alt="Tomato Fertilizer">
+                        <h3 data-lang-key="fertilizer.tomato">Tomato Fertilizer</h3>
+                    </div>
+                </div>
+                <a href="#fertilizer" class="btn-primary" data-lang-key="fertilizer.viewAllBtn">View All Fertilizers</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer placeholder (injected by footer.js)  
+     
+    
+    
+    
+    ye mera abhi ka advisory page hai hu isko thoda aur modifi karu like if user clik in adivsiry section 4 section open ho 1. soil selection 2. related crops 3. fertilizer 4. equipment
+how it working together aftter user rech at adivvisory page 4 section is show ho. iske niche india me corrent kis state me kitna kon crop jayda profitable huaa haua other crop relate new like kisi state baadh yaya to crop ka nuksaan huaa ye sab ho side me ek graph bhi 5 yr ka jisme show ho statewise kis state me kitna kis crops ka production badha ki ghata.(by defaust ye open hi rahega aur news card 7-8 hoge oo rotete krne hi rahege.)
+
+ab next kaam advisory page ka when user clik on soil selection open all type of soil name in horizantaly section use soil name ke niche ek(!) simbol ho jisme clik ya cursour le jane par show ho ye soil kis kis state me paya jata hai ek pop up ke help se. if user clik on select soil type.
+
+than uske relate crop show hone lage jaise abhi hota hai but in 1 row show only 4 crop card than niche show ho simalarly .baaki same rahega usme uska full procced rahega jaise abhi hai 
+
+ek name fertilizer.js banana hoga jisme sare tyes fertilizeer avilavle ho dap jo crop kr detail name oo sab fertilizer ka name card hoga.
+
+similsrly ek new equpmwent.js file sare equpment choti se choti bae se bade jo kissan workme use hoti like sikale kudal se leke tractor , compaonei tak sab kuch
+
+
+-->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/language.js"></script>
+    <script src="js/schemes.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisaan Saathi - Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo-and-language">
+            <div class="logo">🌿किसान Saathiii 🌿</div>
+            <div class="language-switcher">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                </select>
+            </div>
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html" data-lang-key="navbar.home">Home</a></li>
+                <li><a href="weather.html" data-lang-key="navbar.weather">Weather</a></li>
+                <li><a href="advisory.html" data-lang-key="navbar.advisory">Advisory</a></li>
+                <li><a href="news.html" data-lang-key="navbar.news">News</a></li>
+                <li><a href="insurance.html" data-lang-key="navbar.insurance">Crop Insurance</a></li>
+                <li><a href="mrp-rate.html" data-lang-key="navbar.mrpRate">MRP Rate</a></li>
+                <li><a href="about.html" data-lang-key="navbar.about">About</a></li>
+                <li><a href="login.html" data-lang-key="navbar.loginSignup">Login / Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content login-page">
+        <section class="login-container">
+            <h2 data-lang-key="login.signupTitle">Create a Kisaan Saathi Account</h2>
+            <form>
+                <div class="input-group">
+                    <label for="name" data-lang-key="login.nameLabel">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone" data-lang-key="login.phoneLabel">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="input-group">
+                    <label for="email" data-lang-key="login.emailLabel">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password" data-lang-key="login.passwordLabel">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="location" data-lang-key="login.locationLabel">Location</label>
+                    <select id="location" name="location" required>
+                        <option value="india" selected>India</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="state" data-lang-key="login.stateLabel">State</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                <div class="input-group">
+                    <label for="pincode" data-lang-key="login.pincodeLabel">Pincode</label>
+                    <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required>
+                </div>
+                <button type="submit" class="btn-primary" data-lang-key="login.signupButton">Sign Up</button>
+            </form>
+
+            <!-- ✅ FIXED: Text और link अलग elements में -->
+            <p class="signup-text">
+                <span data-lang-key="login.haveAccountText">Already have an account?</span>
+                <a href="login.html" data-lang-key="login.loginLink">Login</a>
+            </p>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="js/footer.js"></script>
+    <script src="js/language.js"></script>
+</body>
+
+</html>

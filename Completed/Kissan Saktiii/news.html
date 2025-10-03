@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-News - Insights & Trends</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/advisory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header id="navbar"></header>
+    <main class="container news-page">
+        <section class="content-section">
+            <h2 data-lang-key="news.newsTitle">Latest Agri-News</h2>
+            <p data-lang-key="news.newsSubtitle">Stay up-to-date with the latest news, market trends, and innovations in
+                the agricultural sector.</p>
+
+            <div class="news-container">
+                <article class="news-item">
+                    <h3 data-lang-key="news.news1.title">New Subsidy on Fertilizers Announced</h3>
+                    <p data-lang-key="news.news1.text">The government has increased the subsidy on DAP fertilizers to
+                        support farmers during the Kharif season.</p>
+                    <a href="#" data-lang-key="news.readFullStory">Read Full Story</a>
+                </article>
+                <article class="news-item">
+                    <h3 data-lang-key="news.news2.title">Record-Breaking Wheat Production</h3>
+                    <p data-lang-key="news.news2.text">India is set to achieve a new record in wheat production,
+                        boosting national food security.</p>
+                    <a href="#" data-lang-key="news.readFullStory">Read Full Story</a>
+                </article>
+            </div>
+        </section>
+
+        <div id="analytics-dashboard" class="advisory-section dashboard-section" style="margin-top: 3rem;">
+            <h2>📊 Indian Agriculture Insights / भारतीय कृषि विश्लेषण</h2>
+            <div class="dashboard-content">
+                <div class="news-carousel">
+                    <h3>Current News & Profitability 📰</h3>
+                    <div id="news-cards-container" class="carousel-track">
+                        <div class="news-card">
+                            <h4>Wheat Profit 📈</h4>
+                            <p>Punjab sees 15% YoY rise due to export demand.</p>
+                        </div>
+                        <div class="news-card">
+                            <h4>Jute Crop Alert ⛈️</h4>
+                            <p>Flood damage reported in West Bengal; prices expected to climb.</p>
+                        </div>
+                        <div class="news-card">
+                            <h4>DAP Subsidy Update</h4>
+                            <p>New subsidy announced for Rabi sowing season.</p>
+                        </div>
+                        <div class="news-card">
+                            <h4>Soybean Record</h4>
+                            <p>MP set to achieve a record soybean harvest this year.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="graph-controls" style="display: flex; gap: 10px; margin-bottom: 10px;">
+                    <select id="graph-state-select">
+                        <option value="">Select State</option>
+                        <option value="AP">Andhra Pradesh</option>
+                        <option value="AS">Assam</option>
+                        <option value="BR">Bihar</option>
+                        <option value="CT">Chhattisgarh</option>
+                        <option value="GJ">Gujarat</option>
+                        <option value="HR">Haryana</option>
+                        <option value="HP">Himachal Pradesh</option>
+                        <option value="JH">Jharkhand</option>
+                        <option value="KA">Karnataka</option>
+                        <option value="KL">Kerala</option>
+                        <option value="MP">Madhya Pradesh</option>
+                        <option value="MH">Maharashtra</option>
+                        <option value="OD">Odisha</option>
+                        <option value="PB">Punjab</option>
+                        <option value="RJ">Rajasthan</option>
+                        <option value="TN">Tamil Nadu</option>
+                        <option value="TS">Telangana</option>
+                        <option value="UP">Uttar Pradesh</option>
+                        <option value="WB">West Bengal</option>
+                    </select>
+
+                    <select id="graph-crop-select">
+                        <option value="">Select Crop</option>
+                        <option value="Rice">Rice (Dhan)</option>
+                        <option value="Wheat">Wheat (Gehun)</option>
+                        <option value="Maize">Maize (Makka)</option>
+                        <option value="Sugarcane">Sugarcane (Ganna)</option>
+                        <option value="Cotton">Cotton (Kapas)</option>
+                        <option value="Soybean">Soybean</option>
+                        <option value="Pulses">Pulses (Dal)</option>
+                        <option value="Mustard">Mustard (Sarson)</option>
+                        <option value="Potato">Potato (Aalu)</option>
+                        <option value="Tea">Tea</option>
+                    </select>
+                </div>
+
+                <canvas id="production-chart" style="max-height: 250px;"></canvas>
+                <p id="graph-message" style="text-align:center; margin-top:10px;">Graph integration coming soon.</p>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/news_dashboard.js" defer></script>
+</body>
+
+</html>

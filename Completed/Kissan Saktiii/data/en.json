@@ -1,0 +1,184 @@
+{
+  "navbar": {
+    "home": "Home",
+    "weather": "Weather",
+    "advisory": "Advisory",
+    "news": "News",
+    "insurance": "Crop Insurance",
+    "mrpRate": "MRP Rate",
+    "about": "About",
+    "loginSignup": "Login/Signup"
+  },
+  "hero": {
+    "title": "Your Farming Partner",
+    "subtitle": "Empowering farmers with data-driven insights for better yields and profits.",
+    "searchPlaceholder": "Search for crops, fertilizers, and schemes..."
+  },
+  "weather": {
+    "title": "Weather Updates",
+    "subtitle": "Check the latest weather forecasts",
+    "currentConditions": "Current Conditions"
+  },
+  "schemes": {
+    "title": "Government Schemes for Farmers",
+    "pmfby": {
+      "title": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+      "text": "Crop insurance scheme to protect farmers against natural calamities."
+    },
+    "pmkisan": {
+      "title": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+      "text": "A central sector scheme providing income support to all landholding farmer families."
+    },
+    "kcc": {
+      "title": "Kisan Credit Card (KCC)",
+      "text": "Provides timely and adequate credit support to farmers for their agricultural needs."
+    },
+    "enam": {
+      "title": "e-NAM (National Agriculture Market)",
+      "text": "An online trading portal for farmers to ensure fair prices."
+    }
+  },
+  "advisory": {
+    "pageTitle": "Smart Crop Advisory",
+    "pageSubtitle": "Choose soil → season → crop. Get profit & production-focused recommendations, fertilizers, pest-control options, equipment & full process from field preparation to storage.",
+    "selectSoil": " Select Soil Type",
+    "equipmentAdvisory": " Equipment Advisory / उपकरण सलाह",
+    "fertilizerDisplay": " Recommended Fertilizers/ अनुशंसित उर्वरक",
+    "soil": {
+      "alluvial": "जलोढ़ (Alluvial)",
+      "alluvialDesc": "Fertile river plains",
+      "black": "काली (Black)",
+      "blackDesc": "Good moisture retention",
+      "red": "लाल और पीली (Red & Yellow)",
+      "redDesc": "Well-drained oxidized soils",
+      "laterite": "लेटराइट (Laterite)",
+      "lateriteDesc": "Acidic, suited for cashews/coffee",
+      "desert": "रेगिस्तानी (Desert/Arid)",
+      "desertDesc": "Low rainfall, drought tolerant crops",
+      "saline": "लवणीय/क्षारीय (Saline/Alkaline)",
+      "salineDesc": "Requires reclamation"
+    },
+    "selectSeason": " Select Season",
+    "season": {
+      "kharif": "Kharif (June-Oct)",
+      "rabi": "Rabi (Nov-Apr)",
+      "zaid": "Zaid (Mar-Jun)"
+    },
+    "fertilizerCalc": "Fertilizer Calculator",
+    "fertilizerWarning": "⚠️ Always get a soil test before fertilizing. Follow pesticide label & local advice.",
+    "fieldSizeLabel": "Field Size:",
+    "units": {
+      "acre": "Acre",
+      "hectare": "Hectare",
+      "bigha": "Bigha",
+      "katha": "Katha",
+      "dhur": "Dhur"
+    },
+    "calcBtn": "Calculate",
+    "recommendedCrops": "Recommended Crops for Alluvial Soil (Kharif)",
+    "crops": {
+      "rice": "चावल (Rice)",
+      "riceYield": "Approx. yield: 4 t/ha",
+      "maize": "मक्का (Maize)",
+      "maizeYield": "Approx. yield: 6 t/ha"
+    },
+    "tags": {
+      "profitable": "Profitable",
+      "highYield": "High Yield"
+    },
+    "detailsBtn": "Details",
+    "quickCalcLabel": "Quick Calc (ha):",
+    "quickCalcBtn": "Estimate for selected crop"
+  },
+  "fertilizer": {
+    "exploreTitle": "Explore Fertilizers",
+    "dap": "DAP Phosphate",
+    "ge": "GE-1236",
+    "tomato": "Tomato Fertilizer",
+    "viewAllBtn": "View All Fertilizers"
+  },
+  "news": {
+    "newsTitle": "Latest Agri-News",
+    "newsSubtitle": "Stay up-to-date with the latest news, market trends, and innovations in the agricultural sector.",
+    "news1": {
+      "title": "New Subsidy on Fertilizers Announced",
+      "text": "The government has increased the subsidy on DAP fertilizers to support farmers during the Kharif season."
+    },
+    "news2": {
+      "title": "Record-Breaking Wheat Production",
+      "text": "India is set to achieve a new record in wheat production, boosting national food security."
+    },
+    "readFullStory": "Read Full Story"
+  },
+  "insurance": {
+    "insuranceTitle": "Crop Insurance Services",
+    "insuranceSubtitle": "Protect your crops from unexpected losses. We provide comprehensive information on various crop insurance schemes, including the Pradhan Mantri Fasal Bima Yojana (PMFBY).",
+    "insurancePoint1": "Understand eligibility criteria and documentation.",
+    "insurancePoint2": "Calculate and compare premiums for different crops.",
+    "insurancePoint3": "Get guidance on the application process and claim settlements.",
+    "explorePlans": "Explore Insurance Plans"
+  },
+  "mrp": {
+    "mrpTitle": "MRP Rate Lookup",
+    "mrpSubtitle": "Check the latest Maximum Retail Price (MRP) of essential agricultural products like fertilizers, pesticides, and seeds.",
+    "mrpSearchPlaceholder": "Search for a product (e.g., Urea, DAP)",
+    "search": "Search",
+    "urea": "Urea (45kg Bag)",
+    "dap": "DAP (50kg Bag)",
+    "potash": "Potash (50kg Bag)"
+  },
+  "login": {
+    "loginTitle": "Login to Kisaan Saathi",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "loginButton": "Login",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Enter your password",
+    "signupTitle": "Create a Kisaan Saathi Account",
+    "nameLabel": "Full Name",
+    "phoneLabel": "Phone Number",
+    "locationLabel": "Location",
+    "stateLabel": "State",
+    "pincodeLabel": "Pincode",
+    "signupButton": "Sign Up",
+    "noAccountText": "Don't have an account?",
+    "signupLink": "Sign Up",
+    "haveAccountText": "Already have an account?",
+    "loginLink": "Login"
+  },
+  "about": {
+    "ourStoryTitle": "Our Story",
+    "storyIntro": "🌿किसान Saathiii🌿 was founded to bridge the technology gap in agriculture by providing farmers with modern, data-driven tools. Our journey began with a simple idea: empower every farmer with the right information at the right time.",
+    "storyPoint1": "We started by developing a platform that integrates hyper-local weather data to assist with planting and harvesting decisions.",
+    "storyPoint2": "Our mission expanded to include providing real-time market prices, connecting farmers directly with buyers to ensure fair compensation.",
+    "storyPoint3": "Today, we are committed to building a digital ecosystem that promotes sustainable farming practices and empowers the agricultural community.",
+    "ourValuesTitle": "Our Values",
+    "value1Title": "Empowerment",
+    "value1Text": "We provide tools and knowledge to help farmers make informed decisions and take control of their livelihoods.",
+    "value2Title": "Sustainability",
+    "value2Text": "We promote eco-friendly practices that benefit both the land and the farmer, ensuring a healthier future.",
+    "value3Title": "Community",
+    "value3Text": "We believe in a strong, connected network where farmers can share knowledge and grow together.",
+    "teamTitle": "Meet Our Team Members",
+    "rajName": "Raj",
+    "rajRole": "Founder & CEO",
+    "rajQuote": "\"Leading the way to a digitally empowered harvest.\"",
+    "adityaName": "Aditya Kr. Singh",
+    "adityaRole": "Head of Agronomy & Tech Integration",
+    "adityaQuote": "\"Bridge traditional wisdom with future technology.\"",
+    "abhishekName": "Abhishek Sharma",
+    "abhishekRole": "Lead Software Architect",
+    "abhishekQuote": "\"Crafting intelligent tools for sustainable farming.\"",
+    "title": "About Kisaan Saathi",
+    "subtitle": "Empowering farmers with data-driven insights and smart agriculture solutions."
+  },
+  "footer": {
+    "aboutUsTitle": "About Kisaan Saathi",
+    "aboutMissionText": "किसान Saathiii ):- Your Farming Partner. Kisaan Saathi is designed to be a one-stop digital companion for every farmer. It helps you navigate the complexities of agriculture by providing smart, data-driven guidance on everything from crop planning to market sales.",
+    "quickLinksTitle": "Quick Links",
+    "customerServicesTitle": "Customer Services",
+    "contactUs": "Contact Us",
+    "faq": "FAQ",
+    "followUsTitle": "Follow Us"
+  }
+}

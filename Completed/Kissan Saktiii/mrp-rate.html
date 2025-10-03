@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisaan Saathi - MRP Rate</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo-and-language">
+            <div class="logo">🌿किसान Saathiii 🌿</div>
+            <div class="language-switcher">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                </select>
+            </div>
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html" data-lang-key="navbar.home">Home</a></li>
+                <li><a href="weather.html" data-lang-key="navbar.weather">Weather</a></li>
+                <li><a href="advisory.html" data-lang-key="navbar.advisory">Advisory</a></li>
+                <li><a href="news.html" data-lang-key="navbar.news">News</a></li>
+                <li><a href="insurance.html" data-lang-key="navbar.insurance">Crop Insurance</a></li>
+                <li><a href="mrp-rate.html" class="active" data-lang-key="navbar.mrpRate">MRP Rate</a></li>
+                <li><a href="about.html" data-lang-key="navbar.about">About</a></li>
+                <li><a href="login.html" data-lang-key="navbar.loginSignup">Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section id="mrp-rate" class="section-card">
+            <h2 data-lang-key="mrp.mrpTitle">MRP Rate Lookup</h2>
+            <p data-lang-key="mrp.mrpSubtitle">
+                Check the latest Maximum Retail Price (MRP) of essential agricultural products like fertilizers,
+                pesticides, and seeds.
+            </p>
+            <div class="mrp-rate-content">
+                <div class="search-bar">
+                    <input type="text" data-lang-key="mrp.mrpSearchPlaceholder"
+                        placeholder="Search for a product (e.g., Urea, DAP)">
+                    <button class="btn-primary"><i class="fas fa-search"></i> <span
+                            data-lang-key="mrp.search">Search</span></button>
+                </div>
+                <div class="rate-list">
+                    <div class="product-item">
+                        <span class="product-name" data-lang-key="mrp.urea">Urea (45kg Bag)</span>
+                        <span class="product-rate">₹266.50</span> </div>
+                    <div class="product-item">
+                        <span class="product-name" data-lang-key="mrp.dap">DAP (50kg Bag)</span>
+                        <span class="product-rate">₹1,350.00</span>
+                    </div>
+                    <div class="product-item">
+                        <span class="product-name" data-lang-key="mrp.potash">Potash (50kg Bag)</span>
+                        <span class="product-rate">₹1,700.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="js/footer.js"></script>
+    <script src="js/language.js"></script>
+</body>
+
+</html>
